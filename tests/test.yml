@@ -1,0 +1,10 @@
+---
+- hosts: all
+  remote_user: root
+  vars:
+    ansible_user_public_keys:
+      - tests/key.pub
+    apt_cache_time: 0
+
+  roles:
+    - role_under_test
