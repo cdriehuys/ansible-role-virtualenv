@@ -8,3 +8,5 @@
 
 - name: Create virtualenv
   command: virtualenv --python={{ venv_python }} {{ venv }}
+  args:
+    creates: "{{ venv }}"
