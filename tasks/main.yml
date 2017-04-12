@@ -10,3 +10,11 @@
   command: virtualenv --python={{ venv_python }} {{ venv }}
   args:
     creates: "{{ venv }}"
+
+- name: Set ownership of virtualenv directory
+  file:
+    path: "{{ venv }}"
+    state: directory
+    owner: "{{ venv_owner | default(omit) }}"
+    group: "{{ venv_group | default(omit) }}"
+    recurse: yes
