@@ -5,3 +5,6 @@
     state: present
     update_cache: yes
     cache_valid_time: "{{ apt_cache_time }}"
+
+- name: Create virtualenv
+  command: virtualenv --python={{ venv_python }} {{ venv }}
