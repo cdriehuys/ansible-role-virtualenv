@@ -13,6 +13,11 @@ Role Variables
 
 The following are the variables used by the role and their defaults.
 
+```YAML
+# How long the apt cache is valid after an update
+apt_cache_time: 3600
+```
+
 Dependencies
 ------------
 
