@@ -18,3 +18,9 @@
     owner: "{{ venv_owner | default(omit) }}"
     group: "{{ venv_group | default(omit) }}"
     recurse: yes
+
+- name: Install pip requirements
+  pip:
+    requirements: "{{ venv_requirements }}"
+    virtualenv: "{{ venv }}"
+  when: venv_requirements is defined and venv_requirements
