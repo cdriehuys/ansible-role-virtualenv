@@ -1,7 +1,7 @@
 cdriehuys.virtualenv
 =========
 
-Role description here.
+Create a python virtualenv.
 
 Requirements
 ------------
