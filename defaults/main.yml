@@ -1,2 +1,7 @@
 ---
-# Insert default variables here
+apt_cache_time: 3600
+
+venv: /opt/virtualenvs/venv
+venv_packages:
+  - python3
+venv_python: python3
