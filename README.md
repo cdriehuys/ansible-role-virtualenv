@@ -1,4 +1,4 @@
-{{ role_name }}
+cdriehuys.virtualenv
 =========
 
 Role description here.
@@ -25,7 +25,7 @@ To run the role, include it as follows.
 
     - hosts: all
       roles:
-         - {{ role_name }}
+         - cdriehuys.virtualenv
 
 License
 -------
