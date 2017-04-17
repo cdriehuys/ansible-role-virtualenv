@@ -11,6 +11,17 @@
   args:
     creates: "{{ venv }}"
 
+- name: Create venv owner
+  user:
+    name: "{{ venv_owner }}"
+    createhome: false
+  when: venv_owner is defined and venv_owner
+
+- name: Create venv group
+  group:
+    name: "{{ venv_group }}"
+  when: venv_group is defined and venv_group
+
 - name: Set ownership of virtualenv directory
   file:
     path: "{{ venv }}"
