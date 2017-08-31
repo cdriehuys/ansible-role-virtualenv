@@ -6,6 +6,14 @@
     update_cache: yes
     cache_valid_time: "{{ apt_cache_time }}"
 
+- name: Install packages required to create virtualenv
+  apt:
+    name: "{{ item }}"
+    state: present
+    update_cache: yes
+    cache_valid_time: "{{ apt_cache_time }}"
+  with_items: "{{ venv_packages }}"
+
 - name: Create virtualenv
   command: virtualenv --python={{ venv_python }} {{ venv }}
   args:
